@@ -23,14 +23,37 @@
         <section id="main">
             
             <form action="" method="get">
-                
-                <input type="checkbox" name="tipoArquivo" value="imagem" id="imagem"><label for="imagem">JPG/JPEG/PNG</label>
-                <input type="checkbox" name="tipoArquivo" value="PDF" id="pdf"><label for="pdf">PDF</label>
-                <input type="checkbox" name="tipoArquivo" value="DOC" id="doc"><label for="doc">DOC</label>
-                <input type="checkbox" name="tipoArquivo" value="CSV" id="csv"><label for="csv">CSV</label>
+                <fieldset border="1">
 
+                    <legend>Selecione o tipo de arquivo:</legend>
+                    <input type="checkbox" name="tipoArquivo" value="imagem" id="imagem"><label for="imagem">JPG/JPEG/PNG</label>
+                    <input type="checkbox" name="tipoArquivo" value="PDF" id="pdf"><label for="pdf">PDF</label>
+                    <input type="checkbox" name="tipoArquivo" value="DOC" id="doc"><label for="doc">DOC</label>
+                    <input type="checkbox" name="tipoArquivo" value="CSV" id="csv"><label for="csv">CSV</label>
 
+                </fieldset>
             </form>
+
+
+            <fieldset>
+                <legend>Regras de nomenclatura:</legend>
+                <ul>
+                    <li>Não possibilitar preencher o nome do arquivo com caracteres especiais (exceto underscore);</li>
+                    <li>Iniciar com letra maiúscula;</li>
+                    <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
+                </ul>
+            </fieldset>
+
+
+            <form action="" method="get">
+                <fieldset border="1">
+
+                    <legend>Selecione o tipo de arquivo:</legend>
+
+                    <input type="file" name="file">
+                </fieldset>
+            </form>
+
 
         </section>
         <footer id="footer"></footer>
