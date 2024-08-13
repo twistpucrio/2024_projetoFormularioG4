@@ -24,13 +24,36 @@
         <section id="main">
 
             <form action="">
-                <label for="tipoVerif">tipo de verificação</label>
-                <input type="radio" name="tipoVerif" 
-                value="sim" 
-                >
-                <input type="radio" name="tipoVerif" 
-                value="nao" 
-                >
+                <fieldset>
+                    <legend>tipo de verificação</legend>
+
+                    
+                    <input type="radio" name="tipoVerif" value="carcEspecial">
+                    <label for="carcEspecial">Caracters Especiais</label>
+                    
+                    <input type="radio" name="tipoVerif" value="minuscula" >
+                    <label for="minuscula">Letras Minúsculas</label>
+
+                    <input type="radio" name="tipoVerif" value="numerico">
+                    <label for="numerico">Digitos Numéricos</label>
+
+                    <input type="radio" name="tipoVerif" value="maiuscula" >
+                    <label for="maiuscula">Letras Maiúsculas</label>                   
+                </fieldset>
+
+                <!-- caixa de texto com fieldset -->
+                <fieldset>
+                    <legend>Digite seu texto</legend>
+                    <textarea name="text" id="text" cols="100" rows="6"></textarea>
+                </fieldset>
+                
+                <!-- caixa de texto sem fieldset -->
+                <!-- <label for="texto">Digite seu texto</label> <br/>
+                <textarea name="text" id="text" cols="100" rows="6"></textarea> -->
+                
+
+                <button type="button" name="limpar" class="limpar">Limpar</button> <!-- botão limpar -->
+                <button type="button" name="limpar" class="submeter">Submeter</button> <!-- botão submeter -->
             </form>
 
         </section>
