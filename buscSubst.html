@@ -11,7 +11,9 @@
 <body>
     
     <div id="conteudo">
+
         <header id="header" ></header>
+
         <nav id="nav">
             <a href="index.html">Home |</a>
             <a href="buscar.html">Buscar |</a>
@@ -19,7 +21,35 @@
             <a href="buscSubst.html">Buscar e Substituir |</a>
             <a href="cadastro.html">Cadastro</a>
         </nav>
-        <section id="main"></section>
+
+        <section id="main">
+
+            <form action="" method="get">
+                <fieldset>
+                    <legend>Find and Replaca</legend>
+
+                    <label for="find">Find: </label>
+                    <input type="text" name="find" id="find">   
+                    <br/> <br/>
+                    <label for="find">Replace: </label>
+                    <input type="text" name="replace" id="replace">
+                    
+                    <br/><br/>
+         
+                <!-- caixa de texto sem fieldset -->
+                <label for="texto">Digite seu texto</label> <br/>
+                <textarea name="text" id="text" cols="100" rows="6"></textarea>
+                <br/>
+                
+
+                <button type="button" name="limpar" class="limpar">Limpar</button> <!-- botão limpar -->
+                <button type="button" name="limpar" class="submeter">Submeter</button> <!-- botão submeter -->
+            
+            </fieldset>
+            </form>
+
+        </section>
+
         <footer id="footer"></footer>
 
 
