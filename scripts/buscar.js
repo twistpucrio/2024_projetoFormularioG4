@@ -1,9 +1,11 @@
+// -> radio, checkbox buttom - checked
 
 function limpar(){
-    let texto = document.querySelector("#text")
-    alert(texto.value)
-
-    texto.value = ""
+    let atividade = document.getElementsByName("tipoVerif")
+    
+    for (at of atividade){
+        at.checked = false
+    }
     
 }
 
@@ -26,3 +28,6 @@ window.addEventListener("load",
         )
     }
 )
+
+
+
