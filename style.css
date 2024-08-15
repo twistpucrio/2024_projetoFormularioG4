@@ -1,0 +1,46 @@
+body{
+    background-color: #f1d5f1;
+    margin: 0px;
+}
+
+
+#nav{
+    
+    width: 200px;
+    height: 100vh;
+    /*position: fixed;*/
+    
+    border-right:1px solid lightgray;
+    
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    /*justify-content: center;*/
+
+    
+
+    margin: 0px;
+   
+    
+    
+    gap: 1rem; /*cada item terá uma certa lacuna*/
+    background-color: #B698B7;
+    /*z-index: 1000;*/
+}
+
+#nav a{
+    padding-left: 50px;
+    padding-top: 70px;
+    padding-right: -100PX;
+
+}
+
+#footer{
+    width: 200px;
+    height: 100vh;
+
+    margin: 0px;
+
+    background-color: #000000;
+}
+
