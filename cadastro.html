@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto form</title>
 
-    <link rel="stylesheet" href="forms.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/cadastro.js"></script>
+
 
 </head>
 <body>
@@ -25,6 +28,8 @@
                     <legend>Dados Pessoais:</legend>
                     <label for="">Nome: </label>
                     <input type="text" name="nome" id="nome">
+
+                    <!-- REGEX -->
 
                     <br>
                     <br>
@@ -67,8 +72,13 @@
                     
                 </fieldset>
 
-                
+             <br/><br/>
+
+                <button type="button" name="limpar" class="btnLimpar">Limpar</button> <!-- botão limpar -->
+                <button type="button" name="limpar" class="btnSubmeter">Submeter</button> <!-- botão submeter -->
+
             </form>
+
         </section>
         <footer id="footer"></footer>
 
