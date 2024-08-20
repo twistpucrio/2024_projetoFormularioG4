@@ -16,7 +16,12 @@ function substitui(entrada, altera){
 }
 
 function split(entrada, corte){
+    let resultado = entrada.split(corte)
+    alert(resultado)
 
+    // for( el of resultado){
+    //     alert(el);
+    // }
 }
 
 // Para colocar os eventos dos botões quando a página for carregada
@@ -47,7 +52,7 @@ window.addEventListener("load",
                 entrada = document.querySelector("#find")
                 altera = document.querySelector('#replace')
 
-                split(entrada, altera);
+                split(entrada.value, altera.value);
             }
         )
 
