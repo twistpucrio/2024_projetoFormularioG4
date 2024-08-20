@@ -8,8 +8,12 @@ function limpar(){
 }
 
 function substitui(entrada,remover,subst){
+
+    let novo = document.querySelector("#newText");
+
     let resp = entrada.replace(remover, subst);
-    alert(resp);
+
+    novo.value = resp;
 
     // exemplo com expressão regular
     // alert("Expressão Regular: " + entrada.replace(/\w/, "removido"));
