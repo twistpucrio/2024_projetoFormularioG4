@@ -1,0 +1,27 @@
+figure{
+    size: 20%;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+
+    border-radius: 50%;
+}
+
+p{
+    width: 40%;
+    height: 50%;
+    text-align: justify;
+    margin-left: 30%;
+}
+
+.pessoa{
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
