@@ -1,11 +1,15 @@
 // -> radio, checkbox buttom - checked
 
 function limpar(){
-    let atividade = document.getElementsByName("tipoVerif")
+    let atividade = document.getElementsByName("tipoVerif");
     
     for (at of atividade){
-        at.checked = false
+        at.checked = false;
     }
+
+    let texto = document.querySelector("#texto");
+
+    texto.value = " ";
     
 }
 

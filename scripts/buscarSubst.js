@@ -1,10 +1,17 @@
 
 function limpar(){
     let texto = document.querySelector("#text");
+
     alert(texto.value);
 
     texto.value = "";
-    
+
+    /*texto.value = " ";
+    texto = document.querySelector("#find");
+    texto.value = " ";
+    texto = document.querySelector("#replace");
+    texto.value = " ";*/
+
 }
 
 function substitui(entrada,remover,subst){

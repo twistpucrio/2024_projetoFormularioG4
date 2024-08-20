@@ -6,7 +6,7 @@
     <title>Projeto form</title>
 
     <link rel="stylesheet" href="forms.css">
-
+    <script src="scripts/arquivo.js"></script>
 
 </head>
 <body>
@@ -26,10 +26,10 @@
                 <fieldset border="1">
 
                     <legend>Selecione o tipo de arquivo:</legend>
-                    <input type="checkbox" name="tipoArquivo" value="imagem" id="imagem"><label for="imagem">JPG/JPEG/PNG</label>
-                    <input type="checkbox" name="tipoArquivo" value="PDF" id="pdf"><label for="pdf">PDF</label>
-                    <input type="checkbox" name="tipoArquivo" value="DOC" id="doc"><label for="doc">DOC</label>
-                    <input type="checkbox" name="tipoArquivo" value="CSV" id="csv"><label for="csv">CSV</label>
+                    <input id="imagem" type="checkbox" name="tipoArquivo" value="imagem"><label for="imagem">JPG/JPEG/PNG</label>
+                    <input id="pdf" type="checkbox" name="tipoArquivo" value="PDF"><label for="pdf">PDF</label>
+                    <input id="doc" type="checkbox" name="tipoArquivo" value="DOC" ><label for="doc">DOC</label>
+                    <input id="csv" type="checkbox" name="tipoArquivo" value="CSV" ><label for="csv">CSV</label>
 
                 </fieldset>
            
@@ -49,8 +49,9 @@
                     <fieldset border="1">
 
                         <legend>Selecione o tipo de arquivo:</legend>
-
-                        <input type="file" name="file">
+                        <input type="text" name="nomeArq" id="nomeArq">
+                        <input type="file" name="file"  value="">
+                        
                     </fieldset>
                 
                 
