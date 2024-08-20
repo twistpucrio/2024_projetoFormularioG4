@@ -31,44 +31,62 @@ function matchNumero(dados){
     return resultado // retorno -1 = não há ocorrência
 }
 
+function validarExtensao(arquivo, extensao){
 
-// window.addEventListener("load", 
-//     function(){
-//         let limpar = this.document.querySelector(".btnLimpar");
-        
-//         limpar.addEventListener("click", 
-//             function(){
-//                 let cpf = document.querySelector("#cpf").value 
-//                 if(cpf != ""){  
-//                     let resp = buscarNum(cpf)
-                    
-//                     alert("índice: "+ resp + "\nPrimeiro número: " + cpf[resp]);
-//                     console.log(cpf)
-//                 }
-//                 else{
-//                     alert("Campo")
-//                 }
-//             }
-//         )
-//     }
-// )
+}
+
+function validarSenha(senha){
+
+}
+
+function validarDataNasc(dtNasc){
+
+}
+
+function validarUsuario(usuario){
+
+}
+
+function validarNomeArq(nomeArquivo){
+
+}
+
+
 
 window.addEventListener("load", 
     function(){
-        let limpar = this.document.querySelector(".btnLimpar");
+        let limpar = document.querySelector(".btnLimpar");
+        let btnValidar = document.querySelector(".btnSubmeter")
+
+        let nome, nasc, arq, usuario, senha;
         
         limpar.addEventListener("click", 
             function(){
                 let cpf = document.querySelector("#cpf").value 
                 if(cpf != ""){  
-                    let resp = matchNumero(cpf)
                     
+                    let resp = matchNumero(cpf)                   
                     alert("Números: "+ resp );
                     console.log(cpf)
+
+                    resp = buscarNum(cpf)
+                    alert("índice: "+ resp + "\nPrimeiro número: " + cpf[resp]);
+                    console.log(cpf)
+
                 }
                 else{
                     alert("Campo")
                 }
+            }
+        )
+
+        btnValidar.addEventListener("click",
+            function(){
+                nome = document.querySelector("#nome").value;
+                nasc = document.querySelector("#dataNasc").value;
+                arq = document.querySelector("#arq")
+                usuario = document.querySelector("#usuario")
+                senha = document.querySelector("#senha")
             }
         )
     }

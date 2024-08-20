@@ -48,7 +48,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Dados Pessoais:</legend>
+                    <legend>Dados Conta:</legend>
                 
                     <label for="usuario">Usuário: </label>
                     <input type="text" name="usuario" id="usuario">
@@ -69,10 +69,16 @@
 
                     <label for="confSenha">Confirmar senha: </label>
                     <input type="password" name="confSenha" id="confSenha">
-                    
-                </fieldset>
 
-             <br/><br/>
+                    <!-- para implementar o exercício em aula-->
+                    <fieldset border="1">
+
+                        <legend>Selecione o tipo de arquivo:</legend>
+
+                        <input type="file" name="file" id="arq">
+                    </fieldset>
+                    
+                </fieldset><br/>
 
                 <button type="button" name="limpar" class="btnLimpar">Limpar</button> <!-- botão limpar -->
                 <button type="button" name="limpar" class="btnSubmeter">Submeter</button> <!-- botão submeter -->

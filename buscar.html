@@ -6,6 +6,9 @@
     <title>Projeto form</title>
 
     <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="scripts/buscar.js"></script>
 
 </head>
 <body>
@@ -44,13 +47,21 @@
                 <!-- caixa de texto com fieldset -->
                 <fieldset>
                     <legend>Digite seu texto</legend>
-                    <textarea name="text" id="text" cols="100" rows="6"></textarea>
+                    <textarea name="text" id="texto" cols="100" rows="6"></textarea>
+
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome">
+
                 </fieldset>
                 
                 <!-- caixa de texto sem fieldset -->
                 <!-- <label for="texto">Digite seu texto</label> <br/>
                 <textarea name="text" id="text" cols="100" rows="6"></textarea> -->
                 
+                <button type="button" value="exec" id="btnExec">Executar</button> <!-- botão exec -->
+                &nbsp;
+                <button type="button" value="test" id="btnTest">Testar</button> <!-- botão test -->
+                &nbsp;
 
                 <button type="button" name="limpar" class="limpar">Limpar</button> <!-- botão limpar -->
                 <button type="button" name="limpar" class="submeter">Submeter</button> <!-- botão submeter -->
