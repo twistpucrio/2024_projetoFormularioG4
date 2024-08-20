@@ -10,6 +10,15 @@
         - split (não usareremos no projeto)
 */
 
+function limpar(){
+    let texto = document.getElementsByClassName("texto")
+
+   for (at of texto){
+        at.value = ""
+   }
+    
+}
+
 function buscarNum(dados){
 
 
@@ -55,12 +64,12 @@ function validarNomeArq(nomeArquivo){
 
 window.addEventListener("load", 
     function(){
-        let limpar = document.querySelector(".btnLimpar");
+        let btnLimpar = document.querySelector(".btnLimpar");
         let btnValidar = document.querySelector(".btnSubmeter")
 
         let nome, nasc, arq, usuario, senha;
         
-        limpar.addEventListener("click", 
+        btnLimpar.addEventListener("click", 
             function(){
                 let cpf = document.querySelector("#cpf").value 
                 if(cpf != ""){  
@@ -77,7 +86,10 @@ window.addEventListener("load",
                 else{
                     alert("Campo")
                 }
+
+                limpar()
             }
+
         )
 
         btnValidar.addEventListener("click",
