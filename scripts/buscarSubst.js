@@ -26,6 +26,15 @@ function substitui(entrada,remover,subst){
     // alert("Expressão Regular: " + entrada.replace(/\w/, "removido"));
 }
 
+/*<<<<<<< aula-regex
+function split(entrada, corte){
+    let resultado = entrada.split(corte)
+    alert(resultado)
+
+    // for( el of resultado){
+    //     alert(el);
+    // }
+=======*/
 function validar(){
     let entrada, remover, subst;
      
@@ -33,6 +42,7 @@ function validar(){
     remover = document.querySelector("#find").value;
     subst = document.querySelector("#replace").value;
     substitui(entrada,remover,subst);
+
 }
 
 // function split(entrada, corte){
@@ -67,9 +77,15 @@ window.addEventListener("load",
         //         entrada = document.querySelector("#find");
         //         altera = document.querySelector('#replace');
 
+/*<<<<<<< aula-regex
+                split(entrada.value, altera.value);
+            }
+        )
+=======*/
         //         split(entrada, altera);
         //     }
         // )
+
 
         // btnReplace.addEventListener("click",
         //     function(){
