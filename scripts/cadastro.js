@@ -40,9 +40,6 @@ function matchNumero(dados){
     const expressao = /[0-9]/g
     let resultado = dados.match(expressao);
 
-    
-    
-
     return resultado // retorno -1 = não há ocorrência
 }
 
