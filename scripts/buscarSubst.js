@@ -45,7 +45,7 @@ function validar(){
 
 }
 
-// function split(entrada, corte){
+//function split(entrada, corte){
 
 // }
 
