@@ -28,7 +28,7 @@ function validar(){
     substitui(entrada,remover,subst);
 }
 
-// function split(entrada, corte){
+//function split(entrada, corte){
 
 // }
 
