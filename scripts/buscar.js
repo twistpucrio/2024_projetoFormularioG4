@@ -13,6 +13,36 @@ function limpar(){
     
 }
 
+
+function valMaiusculo(texto){
+    const expressao = /[A-Z]/g;
+
+    let resultado = texto.match(expressao);
+    return resultado; // retorno -1 = não há ocorrência
+}
+
+function validar(){
+    let texto = document.querySelector("#texto").value;
+    let resposta = document.querySelector("#cont");
+    let maiuscula = document.getElementById("maiuscula");
+
+    let qtd, tipo;
+
+    if(maiuscula.checked){
+       qtd = valMaiusculo(texto);
+       tipo = "letras maiúsculas";
+    }
+
+
+    if(qtd === null){
+        resposta.value = `Padrão ${tipo} não encontrado`;
+    }
+    else{
+        qtd = qtd.length;
+        resposta.value = `Padrão ${tipo} encontrado, quantidade de ocorrências ${qtd}`;
+    }
+}
+
 function executar(n, t){
     const padrao = RegExp('maria*', 'g');
 

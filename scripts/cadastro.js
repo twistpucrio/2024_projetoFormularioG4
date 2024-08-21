@@ -40,26 +40,30 @@ function matchNumero(dados){
     const expressao = /[0-9]/g
     let resultado = dados.match(expressao);
 
-    
-    
+    return resultado // retorno -1 = não há ocorrência
+}
+
+function ehLetra(dados){
+    const expressao = /[a-zA-Z áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]/g
+    let resultado = dados.match(expressao);
 
     return resultado // retorno -1 = não há ocorrência
 }
 
-function valicaoCpf(){
+function valicaoCpf(cpf){
     
-    let cpf = document.querySelector("#cpf").value; 
+    // let cpf = document.querySelector("#cpf").value; 
 
-    for (num of cpf){
-        alert(num)
+    // for (num of cpf){
+    //     alert(num)
         
-        alert(matchNumero(num));
-    }
+    //     alert(matchNumero(num));
+    // }
 
 
-    let numeros = cpf.length
+    // let numeros = cpf.length
     
-    alert("num ocorrencias: " + a + numeros)
+    // alert("num ocorrencias: " + a + numeros)
 
     // let cpf = document.querySelector("#cpf").value 
                 
@@ -80,8 +84,14 @@ function valicaoCpf(){
                 // }
 }
 
-function validarNome(){
+function validarNome(nome){
+    
 
+    for(dig of nome){
+        if(null===ehLetra(dig)){
+            alert("erro");
+        }
+    }
 }
 
 function verificarTamanho(minTamanho, maxTamanho){
@@ -153,16 +163,16 @@ window.addEventListener("load",
         btnValidar.addEventListener("click",
             function(){
                 nome = document.querySelector("#nome").value;
-                nasc = document.querySelector("#dataNasc").value;
-                arq = document.querySelector("#arq")
-                usuario = document.querySelector("#usuario")
-                senha = document.querySelector("#senha")
+                // nasc = document.querySelector("#dataNasc").value;
+                // arq = document.querySelector("#arq")
+                // usuario = document.querySelector("#usuario")
+                // senha = document.querySelector("#senha")
 
                 validarNome(nome);
-                validarDataNasc(nasc);
-                validarExtensao(arq, "doc");
-                validarSenha(senha);
-                validarUsuario(usuario);
+                // validarDataNasc(nasc);
+                // validarExtensao(arq, "doc");
+                // validarSenha(senha);
+                // validarUsuario(usuario);
             }
         )
     }

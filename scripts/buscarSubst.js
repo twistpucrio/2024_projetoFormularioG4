@@ -6,11 +6,11 @@ function limpar(){
 
     texto.value = "";
 
-    /*texto.value = " ";
+    texto.value = " ";
     texto = document.querySelector("#find");
     texto.value = " ";
     texto = document.querySelector("#replace");
-    texto.value = " ";*/
+    texto.value = " ";
 
 }
 
