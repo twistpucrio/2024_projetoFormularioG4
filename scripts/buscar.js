@@ -13,6 +13,12 @@ function limpar(){
     
 }
 
+function valMinusculo(texto){
+    const expressao = /[a-z]/g;
+
+    let resultado = texto.match(expressao);
+    return resultado; // retorno -1 = não há ocorrência
+}
 
 function valMaiusculo(texto){
     const expressao = /[A-Z]/g;
@@ -21,10 +27,29 @@ function valMaiusculo(texto){
     return resultado; // retorno -1 = não há ocorrência
 }
 
+function valDigito(texto){
+    const expressao = /[0-9]/g;
+
+    let resultado = texto.match(expressao);
+    return resultado; // retorno -1 = não há ocorrência
+}
+
+function valCaracEsp(texto){
+    const expressao = /\W/g;
+
+    let resultado = texto.match(expressao);
+    return resultado; // retorno -1 = não há ocorrência
+}
+
+
 function validar(){
     let texto = document.querySelector("#texto").value;
     let resposta = document.querySelector("#cont");
     let maiuscula = document.getElementById("maiuscula");
+    let minuscula = document.getElementById("minuscula");
+    let digito = document.getElementById("numerico");
+    let caracEspecial = document.getElementById("carcEspecial");
+
 
     let qtd, tipo;
 
@@ -32,7 +57,21 @@ function validar(){
        qtd = valMaiusculo(texto);
        tipo = "letras maiúsculas";
     }
-
+    else if(minuscula.checked){
+        qtd = valMinusculo(texto);
+        tipo = "letras minúsculas";
+     }
+     else if(digito.checked){
+        qtd = valDigito(texto);
+        tipo = "digito númerico";
+     }
+     else if(caracEspecial.checked){
+        qtd = valCaracEsp(texto);
+        tipo = "caracter especial";
+     }
+     else{
+        alert("Selecione uma verificação");
+     }
 
     if(qtd === null){
         resposta.value = `Padrão ${tipo} não encontrado`;
