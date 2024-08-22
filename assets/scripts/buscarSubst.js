@@ -14,7 +14,6 @@ function limpar(){
     texto = document.querySelector("#replace");
     texto.value = " ";
 
-
 }
 
 
