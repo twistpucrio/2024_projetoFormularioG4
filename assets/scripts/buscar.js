@@ -1,45 +1,58 @@
 // -> radio, checkbox buttom - checked
 
+
 function limpar(){
     let atividade = document.getElementsByName("tipoVerif");
-    
+   
     for (at of atividade){
         at.checked = false;
     }
 
+
     let texto = document.querySelector("#texto");
 
+
     texto.value = " ";
-    
+   
 }
+
 
 function valMinusculo(texto){
     const expressao = /[a-z]/g;
 
+
     let resultado = texto.match(expressao);
     return resultado; // retorno -1 = não há ocorrência
 }
+
 
 function valMaiusculo(texto){
     const expressao = /[A-Z]/g;
 
+
     let resultado = texto.match(expressao);
     return resultado; // retorno -1 = não há ocorrência
 }
+
 
 function valDigito(texto){
     const expressao = /[0-9]/g;
 
+
     let resultado = texto.match(expressao);
     return resultado; // retorno -1 = não há ocorrência
 }
+
 
 function valCaracEsp(texto){
     const expressao = /\W/g;
 
+
     let resultado = texto.match(expressao);
     return resultado; // retorno -1 = não há ocorrência
 }
+
+
 
 
 function validar(){
@@ -51,7 +64,10 @@ function validar(){
     let caracEspecial = document.getElementById("carcEspecial");
 
 
+
+
     let qtd, tipo;
+
 
     if(maiuscula.checked){
        qtd = valMaiusculo(texto);
@@ -73,6 +89,7 @@ function validar(){
         alert("Selecione uma verificação");
      }
 
+
     if(qtd === null){
         resposta.value = `Padrão ${tipo} não encontrado`;
     }
@@ -82,36 +99,46 @@ function validar(){
     }
 }
 
+
 function executar(n, t){
     const padrao = RegExp('maria*', 'g');
 
-    let resposta; 
+
+    let resposta;
     resposta = padrao.exec(n);
 
+
     alert("Nome: " + resposta);
+
 
     resposta = padrao.exec(t)
     alert("Texto: " + resposta)
 }
 
+
 function testar(n, t){
     const padrao = new RegExp('maria*', 'g');
     let resposta = padrao.test(n);
 
+
     alert("Nome: " + resposta)
+
 
     resposta = padrao.test(t);
     alert("Texto: " + resposta)
 }
 
+
 // Para colocar os eventos dos botões quando a página for carregada
-window.addEventListener("load", 
+window.addEventListener("load",
     function(){
         let btnLimpa = document.querySelector(".limpar")
         let btnValid = document.querySelector(".submeter")
 
+
         let btnTestar = document.querySelector("#btnTest")
         let btnExecutar = document.querySelector("#btnExec")
+
 
         let nome, texto;
                  
@@ -121,33 +148,37 @@ window.addEventListener("load",
             }
         )
 
-        btnValid.addEventListener("click", 
+
+        btnValid.addEventListener("click",
             function(){
                 validar();
             }
         )
 
+
         btnTestar.addEventListener("click",
             function(){
 
+
                 nome = document.querySelector("#nome");
                 texto = document.querySelector('#texto');
+
 
                 testar(nome.value, texto.value);
             }
         )
 
+
         btnExecutar.addEventListener("click",
             function(){
 
+
                 nome = document.querySelector("#nome");
                 texto = document.querySelector('#texto');
+
 
                 executar(nome.value, texto.value);
             }
         )
     }
 )
-
-
-
