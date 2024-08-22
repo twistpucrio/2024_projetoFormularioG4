@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto form</title>
 
-    <link rel="stylesheet" href="forms.css">
-    <link rel="stylesheet" href="style.css">
 
-    <script src="scripts/buscar.js"></script>
+    <link rel="stylesheet" href="assets/styles/forms.css">
+    <script src="assets/scripts/buscar.js"></script>
+
 
 </head>
 <body>
-    
+   
     <div id="conteudo">
         <header id="header" ></header>
+
 
         <nav id="nav">
             <a href="index.html">Home |</a>
@@ -24,54 +25,67 @@
             <a href="cadastro.html">Cadastro</a>
         </nav>
 
+
         <section id="main">
+
 
             <form action="">
                 <fieldset>
                     <legend>tipo de verificação</legend>
 
-                    
+
+                   
                     <input class="radio" type="radio" name="tipoVerif" value="carcEspecial" id="carcEspecial">
                     <label for="carcEspecial">Caracters Especiais</label>
-                    
+                   
                     <input class="radio" type="radio" name="tipoVerif" value="minuscula" id="minuscula">
                     <label for="minuscula">Letras Minúsculas</label>
+
 
                     <input class="radio" type="radio" name="tipoVerif" value="numerico" id="numerico">
                     <label for="numerico">Digitos Numéricos</label>
 
+
                     <input class="radio" type="radio" name="tipoVerif" value="maiuscula" id="maiuscula">
-                    <label for="maiuscula">Letras Maiúsculas</label>                   
+                    <label for="maiuscula">Letras Maiúsculas</label>                  
                 </fieldset>
+
 
                 <!-- caixa de texto com fieldset -->
                 <fieldset>
                     <legend>Digite seu texto</legend>
                     <textarea name="text" id="texto" cols="100" rows="6"></textarea>
 
+
                     <input type="text" name="cont" id="cont" size="103" readonly>
 
+
                 </fieldset>
-                
+               
                 <!-- caixa de texto sem fieldset -->
                 <!-- <label for="texto">Digite seu texto</label> <br/>
                 <textarea name="text" id="text" cols="100" rows="6"></textarea> -->
-                
+               
                 <!-- <button type="button" value="exec" id="btnExec">Executar</button>  botão exec --
                 &nbsp;
                 <button type="button" value="test" id="btnTest">Testar</button> <!- botão test >
                 &nbsp; -->
 
+
                 <button type="button" name="limpar" class="limpar">Limpar</button> <!-- botão limpar -->
                 <button type="button" name="submeter" class="submeter">Submeter</button> <!-- botão submeter -->
             </form>
 
+
         </section>
+
 
         <footer id="footer"></footer>
 
 
+
+
     </div>
-    
+   
 </body>
 </html>

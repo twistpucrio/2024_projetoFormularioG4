@@ -6,13 +6,17 @@
     <title>Projeto form</title>
 
 
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts/cadastro.js"></script>
+
+
+    <link rel="stylesheet" href="assets/styles/forms.css">
+    <script src="assets/scripts/cadastro.js"></script>
+
+
 
 
 </head>
 <body>
-    
+   
     <div id="conteudo">
         <header id="header" ></header>
         <nav id="nav">
@@ -23,73 +27,88 @@
             <a href="cadastro.html">Cadastro</a>
         </nav>
         <section id="main">
-            <form action="" method="get">
+            <form class="form" action="" method="get">
                 <fieldset>
                     <legend>Dados Pessoais:</legend>
                     <label for="nome">Nome: </label>
-                    <input class="texto" type="text" name="nome" id="nome">
+                    <input class="texto required" type="text" name="nome" id="nome">
+                    <span class="span-required">não permite dígitos numéricos</span>
 
-                    <!-- REGEX -->
 
                     <br>
                     <br>
                    
                     <label for="cpf">CPF: </label>
-                    <input class="texto" type="text" name="cpf" id="cpf"
-                        size="13" maxlength="11"  placeholder="xxx.xxx.xxx-xx">
+                    <input class="texto required" type="text" name="cpf" id="cpf"
+                        size="13" maxlength="14"  placeholder="xxx.xxx.xxx-xx">
+                    <span class="span-required">erro na validação</span>
+                   
                     <br>
                     <br>
 
+
                     <label for="dataNasc">Data de nascimento: </label>
-                    <input class="texto" type="date" name="dataNasc" id="dataNasc">
+                    <input class="texto required" type="date" name="dataNasc" id="dataNasc">
+                    <span class="span-required">erro na validação</span>
                     <br>
                     <br>
+
 
                 </fieldset>
 
+
                 <fieldset>
                     <legend>Dados Conta:</legend>
-                
+               
                     <label for="usuario">Usuário: </label>
-                    <input class="texto" type="text" name="usuario" id="usuario">
+                    <input class="texto required" type="text" name="usuario" id="usuario">
+                    <span class="span-required">erro na validação</span>
+
 
                     <br>
                     <br>
                    
                     <label for="email">Email: </label>
-                    <input class="texto" type="email" name="email" id="email"
+                    <input class="texto required" type="email" name="email" id="email"
                            placeholder="algumacoisa@algumacoisa">
+                    <span class="span-required">erro na validação</span>
+
+
                     <br>
                     <br>
+
 
                     <label for="senha">Senha: </label>
-                    <input class="texto" type="password" name="senha" id="senha">
+                    <input class="texto required" type="password" name="senha" id="senha">
+                    <span class="span-required">erro na validação</span>
+
+
                     <br>
                     <br>
+
 
                     <label for="confSenha">Confirmar senha: </label>
-                    <input class="texto" type="password" name="confSenha" id="confSenha">
-
-                    <!-- para implementar o exercício em aula-->
-                    <fieldset border="1">
-
-                        <legend>Selecione o tipo de arquivo:</legend>
-
-                        <input type="file" name="file" id="arq">
-                    </fieldset>
-                    
+                    <input class="texto required" type="password" name="confSenha" id="confSenha">
+                    <span class="span-required">erro na validação</span>
+                   
                 </fieldset><br/>
+
 
                 <button type="button" name="limpar" class="btnLimpar">Limpar</button> <!-- botão limpar -->
                 <button type="button" name="limpar" class="btnSubmeter">Submeter</button> <!-- botão submeter -->
 
+
             </form>
+
 
         </section>
         <footer id="footer"></footer>
 
 
+
+
     </div>
-    
+   
 </body>
 </html>
+
