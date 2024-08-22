@@ -9,6 +9,10 @@ function limpar(){
 }
 
 
+function valRegras(nome){
+    const exp = 
+}
+
 // Para colocar os eventos dos botões quando a página for carregada
 window.addEventListener("load", 
     function(){
