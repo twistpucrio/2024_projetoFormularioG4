@@ -1,5 +1,6 @@
 
 function limpar(){
+    //teste
     let texto = document.querySelector("#text");
 
     alert(texto.value);
