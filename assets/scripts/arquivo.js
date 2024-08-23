@@ -1,10 +1,12 @@
 function limpar(){
-    let atividade = document.getElementsByName("tipoArquivo")
-   
+    let atividade = document.getElementsByName("tipoArquivo");
    
     for (at of atividade){
-        at.checked = false
+        at.checked = false;
     }
+
+    let arq = document.getElementsByName("file");
+    arq.value = "";
    
 }
 
@@ -94,52 +96,52 @@ function validarExtensao(arquivo, extensao){
                 // validarExtensao(arq, "doc");
 
 
-function valRegras(nome){
-    const exp = /[^([A-Z]{1})([A-Za-z_]{7-14})]/g;
-    let resultado = texto.match(expressao);
-    return resultado; 
-}
+// function valRegras(nome){
+//     const exp = /[^([A-Z]{1})([A-Za-z_]{7-14})]/g;
+//     let resultado = texto.match(expressao);
+//     return resultado; 
+// }
 
-function validar(){
-    let nome = document.querySelector("#file").value;
-    let selecionados = document.querySelectorAll("#tipoArquivo");
-    let flag = false;
+// function validar(){
+//     let nome = document.querySelector("#file").value;
+//     let selecionados = document.querySelectorAll("#tipoArquivo");
+//     let flag = false;
 
-    selecionados.checked
+//     selecionados.checked
 
-    let vetor = nome.split(".");
-    let extensao = vetor[1];
-    nome = vetor[0];
-
-
-    for(tipo of selecionados){
-
-        if(extensao === "imagem"){
-            if("png" === extensao.lower){
-                flag = true;
-            }
-            else if("jpeg" === extensao.lower){
-                flag = true;
-            }
-            else if("jpg" === extensao.lower){
-                flag = true;
-            }
-        }
+//     let vetor = nome.split(".");
+//     let extensao = vetor[1];
+//     nome = vetor[0];
 
 
-        if(tipo.lower === extensao.lower){
-            flag = true;
-        }
-    }  
+//     for(tipo of selecionados){
+
+//         if(extensao === "imagem"){
+//             if("png" === extensao.lower){
+//                 flag = true;
+//             }
+//             else if("jpeg" === extensao.lower){
+//                 flag = true;
+//             }
+//             else if("jpg" === extensao.lower){
+//                 flag = true;
+//             }
+//         }
+
+
+//         if(tipo.lower === extensao.lower){
+//             flag = true;
+//         }
+//     }  
     
-    if(flag){
-        valRegras(nome);
-    }
+//     if(flag){
+//         valRegras(nome);
+//     }
 
-    if(flag){
-        alert("oki");
-    }
-}
+//     if(flag){
+//         alert("oki");
+//     }
+// }
 
 
 // function validarExtensao(arquivo, extensao){

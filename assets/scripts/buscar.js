@@ -13,6 +13,11 @@ function limpar(){
 
 
     texto.value = " ";
+
+    texto = document.querySelector("#cont");
+
+    texto.value = " ";
+
    
 }
 
