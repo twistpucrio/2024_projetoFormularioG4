@@ -3,9 +3,9 @@ body{
 }
 
 
-/* #conteudo{
+#conteudo{
     display: flex;
-} */
+}
 
 
 .sidebar{
@@ -49,8 +49,8 @@ body{
 
 
 #main{
-    width: 100vw;
-    height: 90vh;
+    width: 110vw;
+    height: 100vh;
 
 
     background-color: rgb(205,125, 229);
@@ -61,7 +61,7 @@ body{
     justify-content: center;
 
 
-    display: inline-block;;
+    /* display: inline-block;; */
 
 
    
