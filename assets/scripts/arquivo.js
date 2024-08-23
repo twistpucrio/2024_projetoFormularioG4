@@ -1,3 +1,16 @@
+
+function limpar(){
+    let atividade = document.getElementsByName("tipoArquivo");
+   
+    for (at of atividade){
+        at.checked = false;
+    }
+
+    document.getElementById("file").value = "";
+   
+}
+
+
 // function valRegras(nome){
 //     const exp = /[^([A-Z]{1})([A-Za-z_]{7-14})]/g;
 //     let resultado = texto.match(expressao);
@@ -97,6 +110,7 @@ function validarNomeArquivo(arquivo){
 }
 
 
+
 function validarExtensao(arquivo, extensao){
     // obs: arquivo é o elemento input: file inteiro
 
@@ -114,6 +128,7 @@ function validarExtensao(arquivo, extensao){
         arr.push(checkbox[i].name) /* Inclui name do elemento em um array*/;
     }
    
+
 
     console.log(arr)
 
