@@ -140,7 +140,7 @@ function validarExtensao(arquivo, extensao){
             flag = true
         }
         
-        
+        //feito
         else if(e == "imagem"){
             if("png" == extensaoArq){
                 flag = true;
