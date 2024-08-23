@@ -2,7 +2,7 @@ function limpar(){
     let texto = document.querySelector("#text");
 
 
-    alert(texto.value);
+    // alert(texto.value);
 
 
     texto.value = "";
@@ -13,6 +13,9 @@ function limpar(){
     texto.value = " ";
     texto = document.querySelector("#replace");
     texto.value = " ";
+    texto = document.querySelector("#newText");
+    texto.value = " ";
+
 
 }
 

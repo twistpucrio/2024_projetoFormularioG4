@@ -5,8 +5,7 @@ function limpar(){
         at.checked = false;
     }
 
-    let arq = document.getElementsByName("file");
-    arq.value = "";
+    document.getElementById("file").value = "";
    
 }
 
