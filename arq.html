@@ -29,10 +29,10 @@
 
 
                     <legend>Selecione o tipo de arquivo:</legend>
-                    <input id="imagem" type="checkbox" name="tipoArquivo" value="imagem"><label for="imagem">JPG/JPEG/PNG</label>
-                    <input id="pdf" type="checkbox" name="tipoArquivo" value="PDF"><label for="pdf">PDF</label>
-                    <input id="doc" type="checkbox" name="tipoArquivo" value="DOC" ><label for="doc">DOC</label>
-                    <input id="csv" type="checkbox" name="tipoArquivo" value="CSV" ><label for="csv">CSV</label>
+                    <input class="tipoArquivo" id="imagem" type="checkbox" name="imagem" value="imagem"><label for="imagem">JPG/JPEG/PNG</label>
+                    <input class="tipoArquivo" id="pdf" type="checkbox" name="pdf" value="PDF"><label for="pdf">PDF</label>
+                    <input class="tipoArquivo" id="doc" type="checkbox" name="doc" value="DOC" ><label for="doc">DOC</label>
+                    <input class="tipoArquivo" id="csv" type="checkbox" name="csv" value="CSV" ><label for="csv">CSV</label>
 
 
                 </fieldset>
@@ -58,12 +58,12 @@
 
 
                         <legend>Selecione o tipo de arquivo:</legend>
-<!-- /*<<<<<<< organização-do-código-(cadastro)
-                        <input class="arq" type="file" name="file"  value="">
-                       
-=======*/ -->
-                        <input type="file" name="file" id="file" value="Insira seu arquivo: ">
-                        
+
+                        <!-- <input type="text" name="nomeArq" id="nomeArq"> -->
+                        <!-- <input type="file" name="file"   value="Insira seu arquivo:" > -->
+                        <input type="file" name="file"  id="file">
+                        <span class="span-required">erro na validação do nome do arquivo</span>
+                        <span class="span-required">erro de permissão</span>
 
                     </fieldset>
                

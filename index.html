@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -10,8 +11,11 @@
 <body>
    
     <div id="conteudo">
-       
-        <nav id="nav">
+        <header id="header" ></header>
+
+
+        <nav class="sidebar">
+            <!-- <nav id="nav">
             <a href="index.html">Home</a>
             <a href="buscar.html">Buscar</a>
             <a href="arq.html">Arquivo</a>
@@ -20,17 +24,52 @@
            
             <footer id="footer"></footer>
        
+        </nav> -->
+
+
+        <nav id="navigator">
+            <ul class="link">
+                <li>
+                    <a class="a" href="index.html">
+                        <img src="assets/icons/home.png" style="height: 1rem; margin-right: 0.5rem"/>
+                        <p>Página Inicial</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="a" href="buscar.html">
+                        <img src="assets/icons/buscar.png" style="height: 1rem; margin-right: 0.5rem"/>
+                        <p>Buscar</p>
+                    </a>
+                </li>
+                <li>            
+                    <a class="a" href="arq.html">
+                        <img src="assets/icons/arquivo.png" style="height: 1rem; margin-right: 0.5rem"/>
+                        <p>Arquivo</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="a" href="buscSubst.html">
+                        <img src="assets/icons/findReplace.png" style="height: 1rem; margin-right: 0.5rem"/>
+                        <p>Buscar e Substiuir</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="a" href="cadastro.html">
+                        <img src="assets/icons/cadastro.png" style="height: 1rem; margin-right: 0.5rem"/>
+                        <p>Cadastro</p>
+                    </a>
+                </li>
+            </ul>
         </nav>
+   
+        </nav>
+       
+       
         <section id="main">
-
-            
-            <header id="header">Projeto Regex</header>
-
-
             <h1>Sobre nós</h1>
             <div id="hanna" class="pessoa">
                 <figure>                
-                    <img src="img/images.jfif" alt="Foto da Hanna">
+                    <img src="assets/img/images.jfif" alt="Foto da Hanna">
                     <figcaption>Hanna Epelboim Assunção</figcaption>
                 </figure>
 
@@ -42,18 +81,14 @@
                        tenetur libero, ipsum voluptas fugiat quisquam.
                         Magni blanditiis minima mollitia sint nulla.
                         Lorem ipsum dolor sit, amet consectetur adipisicing
-                     elit. Eligendi cupiditate fuga expedita natus
-                      doloribus aperiam at mollitia laborum,
-                       tenetur libero, ipsum voluptas fugiat quisquam.
-                        
-
+                     elit.
                 </p>
             </div>
 
 
             <div id="judy" class="pessoa">
                 <figure>                
-                    <img src="img/images.jfif" alt="Foto da Judy">
+                    <img src="assets/img/images.jfif" alt="Foto da Judy">
                     <figcaption>Judy Faria</figcaption>
                 </figure>
 
@@ -65,10 +100,7 @@
                        tenetur libero, ipsum voluptas fugiat quisquam.
                         Magni blanditiis minima mollitia sint nulla.
                         Lorem ipsum dolor sit, amet consectetur adipisicing
-                     elit. Eligendi cupiditate fuga expedita natus
-                      doloribus aperiam at mollitia laborum,
-                       tenetur libero, ipsum voluptas fugiat quisquam.
-                        
+                     elit.
                 </p>
             </div>
 
@@ -76,10 +108,18 @@
             <div id="descricao">
                 <h1>Sobre o projeto</h1>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit. Quasi modi architecto cumque nemo dolores incidunt
-                    voluptas itaque tenetur, debitis repudiandae, rerum illo.
-                    Praesentium, ea. Laudantium explicabo omnis ipsum eos dignissimos?
+                    O projeto envolveu o desenvolvimento desse site de formulários,
+                    com foco na aplicação prática do aprendizado em HTML, CSS e JavaScript, especialmente
+                    utilizando expressões regulares (regex). O principal objetivo do site era
+                    garantir que as informações inseridas fossem validadas corretamente de acordo com as regras estabelecidas.
+                    <br/>
+                    Para a construção do site, foram utilizados HTML e CSS para estruturar e
+                    estilizar a interface, e JavaScript para as validações.
+                    <br/>
+                    O projeto foi realizado por Judy e Hanna, com o auxílio das tutoras Jéssica e Érica,
+                    além do apoio do monitor Andrey e Maria.
+                    Tentando colocar em prática a organização Scrum....
+                    (explicar como foi a organização)
                 </p>
             </div>
 
@@ -87,8 +127,8 @@
         </section>
 
 
-
     </div>
    
 </body>
 </html>
+
