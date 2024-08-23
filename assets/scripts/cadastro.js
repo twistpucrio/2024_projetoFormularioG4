@@ -135,43 +135,6 @@ function validarNome(campoNome){ //retorna o índice do achado
 // }
 
 
-function validarExtensao(arquivo, extensao){
-    // obs: arquivo é o elemento input:file inteiro
-
-
-    /* PEGAR O NOME DO ARQUIVO */
-
-
-    // alert(arquivo.value)
-    caminho = arquivo.value.split("\\");
-
-
-    // alert(caminho)
-    alert("Primeira forma: " + caminho[ caminho.length - 1])
-
-
-    /* outra maneira: */
-    let resposta = arquivo.files[0];
-    alert("Segunda forma: " + resposta.name)
-
-
-    /* PEGAR A EXTENSAO */
-    // split no ponto
-    let indice = caminho.length - 1;
-    let comparacao = caminho[indice].split(".");
-    let ext = comparacao[comparacao.length - 1];
-    alert(ext)
-
-
-    if(extensao.lower === ext.lower){
-        alert("igual")
-    }
-    else{
-        alert("diferente")
-    }
-}
-
-
 
 
 
@@ -381,17 +344,17 @@ window.addEventListener("load",
             function(){
                 senha = document.querySelector("#senha")
                 nome = document.querySelector("#nome");
-                // nasc = document.querySelector("#dataNasc").value;
-                // arq = document.querySelector("#arq")
-                // usuario = document.querySelector("#usuario")
+                nasc = document.querySelector("#dataNasc").value;
+                arq = document.querySelector("#arq")
+                usuario = document.querySelector("#usuario")
                 confSenha = document.querySelector("#confSenha")
 
 
                 validarNome(nome.value);
-                // validarDataNasc(nasc);
-                // validarExtensao(arq, "doc");
+                validarDataNasc(nasc);
+                validarExtensao(arq, "doc");
                 validaSenha(senha);
-                // validarUsuario(usuario);
+                validarUsuario(usuario);
                 validaTamanho(0)
                 validaEmail(email)
             }

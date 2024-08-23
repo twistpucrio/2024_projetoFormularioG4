@@ -79,7 +79,7 @@ function validarNomeArquivo(arquivo){
     let indiceExtensao = separaNomeComExtensao.length -1 // índice do último, que é a extensão
     let nomeSemExtensao = ""
     let i = 0
-    while (i < indiceExtensao){
+    while (i < indiceExtensao){ // judy, faria -> judyfaria
         nomeSemExtensao += separaNomeComExtensao[i]
         i ++
     }
@@ -90,66 +90,11 @@ function validarNomeArquivo(arquivo){
 
     if (nomeArqRegex.test(nomeArq)){
         removeError(0)
-        console.log("certo")
     }
     else{
         setError(0)
-        console.log("errado")
     }    
 }
-
-
-
-
-// function validarExtensao(arquivo, extensao){
-//     // obs: arquivo é o elemento input: file inteiro
-
-
-//     /* PEGAR A EXTENSAO */
-//     let caminho = arquivo.value.split("."); // split no ponto
-   
-//     let indice = caminho.length - 1; // último da lista -> a extensão
-//     let comparacao = caminho[indice].split("."); // separa pelos pontos
-//     let extensaoArq = comparacao[comparacao.length - 1]; // pega a extensão
-
-
-//     // validação
-//     let checkbox = document.getElementsByName("tipoArquivo");// pegar os checkbox
-//     console.log(checkbox, checkbox.values)
-
-
-//     for (var i=0; i < checkbox.length; i++){
-
-
-//         if (checkbox[i].checked == true){
-//             // CheckBox Marcado... Faça alguma coisa...
-           
-//             console.log("value: ", checkbox, checkbox.value)
-//             console.log("id: ", checkbox, checkbox.id)
-
-
-//         }  else {
-//            // CheckBox Não Marcado... Faça alguma outra coisa...
-//            console.log("item não selecionado: ", checkbox, checkbox.value)
-//         }
-//     }
-
-
-
-
-// //     let flag = false;
-
-
-// //     selecionados.checked
-
-
-//     // if(extensaoArq.lower === extensao.lower){
-//     //     alert("igual")
-//     // }
-//     // else{
-//     //     alert("diferente")
-//     // }
-// }
 
 
 function validarExtensao(arquivo, extensao){
@@ -169,8 +114,8 @@ function validarExtensao(arquivo, extensao){
         arr.push(checkbox[i].name) /* Inclui name do elemento em um array*/;
     }
    
-    console.log(arr)
 
+    console.log(arr)
 
     /* Apontar o erro se a extensão não estiver marcada*/
     // pegar a  extensão e verificar se ela está presente na array (arr)
@@ -189,10 +134,28 @@ function validarExtensao(arquivo, extensao){
 
 
     for ( e of arr){
+        console.log("imagem: ", e == "imagem")
+        console.log("extensao: ", extensao == "")
         if (e == extensaoArq){
             flag = true
         }
+        
+        
+        else if(e == "imagem"){
+            if("png" == extensaoArq){
+                flag = true;
+            }
+            else if("jpeg" == extensaoArq){
+                flag = true;
+            }
+            else if("jpg" == extensaoArq){
+                flag = true;
+            }
+        }
+
     }
+
+    console.log(arr, extensaoArq)
 
 
     if (flag == true){
@@ -251,7 +214,6 @@ window.addEventListener("load",
 
         btnValid.addEventListener("click",
             function(){
-                // validar();
                 validarNomeArquivo(arq)
                 validarExtensao(arq, "docs");
             }
