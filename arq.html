@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto form</title>
 
-    <link rel="stylesheet" href="forms.css">
-    <script src="scripts/arquivo.js"></script>
+
+    <link rel="stylesheet" href="assets/styles/forms.css">
+    <script src="assets/scripts/arquivo.js"></script>
+
 
 </head>
 <body>
-    
+   
     <div id="conteudo">
         <header id="header" ></header>
         <nav id="nav">
@@ -21,9 +23,10 @@
             <a href="cadastro.html">Cadastro</a>
         </nav>
         <section id="main">
-            
+           
             <form action="" method="get">
                 <fieldset border="1">
+
 
                     <legend>Selecione o tipo de arquivo:</legend>
                     <input id="imagem" type="checkbox" name="tipoArquivo" value="imagem"><label for="imagem">JPG/JPEG/PNG</label>
@@ -31,8 +34,11 @@
                     <input id="doc" type="checkbox" name="tipoArquivo" value="DOC" ><label for="doc">DOC</label>
                     <input id="csv" type="checkbox" name="tipoArquivo" value="CSV" ><label for="csv">CSV</label>
 
+
                 </fieldset>
            
+
+
 
 
                 <fieldset>
@@ -45,27 +51,39 @@
                 </fieldset>
 
 
-            
+
+
+           
                     <fieldset border="1">
 
+
                         <legend>Selecione o tipo de arquivo:</legend>
-                        <input type="text" name="nomeArq" id="nomeArq">
-                        <input type="file" name="file"  value="">
+/*<<<<<<< organização-do-código-(cadastro)
+                        <input class="arq" type="file" name="file"  value="">
+                       
+=======*/
+                        <input type="file" name="file"  value="Insira seu arquivo: ">
                         
+
                     </fieldset>
-                
-                
+               
+               
                 <button type="button" name="limpar" class="limpar">Limpar</button> <!-- botão limpar -->
                 <button type="button" name="limpar" class="submeter">Submeter</button> <!-- botão submeter -->
-            
+           
             </form>
+
+
 
 
         </section>
         <footer id="footer"></footer>
 
 
+
+
     </div>
-    
+   
 </body>
 </html>
+

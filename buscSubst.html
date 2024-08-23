@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto form</title>
 
-    <!-- <link rel="stylesheet" href="forms.css"> -->
-    <link rel="stylesheet" href="style.css">
 
-    <script src="scripts/buscarSubst.js"></script>
+    <!-- <link rel="stylesheet" href="forms.css"> -->
+    <link rel="stylesheet" href="assets/styles/forms.css">
+    <script src="assets/scripts/buscarSubst.js"></script>
+
 
 </head>
 <body>
-    
+   
     <div id="conteudo">
 
+
         <header id="header" ></header>
+
 
         <nav id="nav">
             <a href="index.html">Home |</a>
@@ -25,22 +28,27 @@
             <a href="cadastro.html">Cadastro</a>
         </nav>
 
+
         <section id="main">
+
 
             <form action="" method="get">
                 <fieldset>
                     <legend>Buscar e substituir</legend>
 
+
                     <label for="find">Buscar: </label>
-                    <input type="text" name="find" id="find">   
+                    <input type="text" name="find" id="find">  
                     <br/> <br/>
                     <label for="find">Substituir: </label>
                     <input type="text" name="replace" id="replace">
-                    
+                   
                     <br/><br/>
          
 
+
                 <!-- caixa de texto sem fieldset -->
+
 
                     <label for="text">Digite seu texto: </label> <br/>
                     <textarea name="text" id="text" cols="100" rows="6"></textarea>
@@ -48,24 +56,31 @@
                     <label for="newText">Digite seu texto: </label> <br/>
                     <textarea name="newText" id="newText" cols="100" rows="6" readonly></textarea>
 
+
                 </fieldset>  
-<!--            <button type="button" value="split" id="btnSplit">Split</button>  botão split 
+<!--            <button type="button" value="split" id="btnSplit">Split</button>  botão split
                 &nbsp;
-                <button type="button" value="replace" id="btnReplace">Replace</button>  botão replace 
+                <button type="button" value="replace" id="btnReplace">Replace</button>  botão replace
                 &nbsp; -->
+
 
                 <button type="button" name="limpar" class="limpar">Limpar</button> <!-- botão limpar -->
                 <button type="button" name="limpar" class="submeter">Submeter</button> <!-- botão submeter -->
-          
+         
+
 
             </form>
 
+
         </section>
+
 
         <footer id="footer"></footer>
 
 
+
+
     </div>
-    
+   
 </body>
 </html>
