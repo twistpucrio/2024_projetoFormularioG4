@@ -52,36 +52,47 @@ function ehLetra(dados){
 
 function valicaoCpf(cpf){
     
-    // let cpf = document.querySelector("#cpf").value; 
-
-    // for (num of cpf){
-    //     alert(num)
-        
-    //     alert(matchNumero(num));
-    // }
-
-
-    // let numeros = cpf.length
+    function valicaoCpf(numCpf){
     
-    // alert("num ocorrencias: " + a + numeros)
-
-    // let cpf = document.querySelector("#cpf").value 
-                
-                // if(cpf != ""){  
+        let cpf = document.querySelector("#cpf").value; 
+        
+        let expressao = /([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/g
+    
+        let resultado = numCpf.test(expressao)
+        alert(resultado)
+    
+        if (expressao.test(value)){
+            alert("correto")
+        }
+        else{
+            alert("CPF Inválido!");
+            // colocar o foco
+            return false
+        }
+        
+    
+        let numeros = cpf.length
+        
+        alert("num ocorrencias: " + a + numeros)
+    
+        // let cpf = document.querySelector("#cpf").value 
                     
-                //     let resp = matchNumero(cpf)                   
-                //     alert("Números: "+ resp );
-                //     console.log(cpf)
-
-                //     resp = buscarNum(cpf)
-                //     alert("índice: "+ resp + "\nPrimeiro número: " + cpf[resp]);
-                //     console.log(cpf)
-
-                // }
-                
-                // else{
-                //     alert("Campo")
-                // }
+                    // if(cpf != ""){  
+                        
+                    //     let resp = matchNumero(cpf)                   
+                    //     alert("Números: "+ resp );
+                    //     console.log(cpf)
+    
+                    //     resp = buscarNum(cpf)
+                    //     alert("índice: "+ resp + "\nPrimeiro número: " + cpf[resp]);
+                    //     console.log(cpf)
+    
+                    // }
+                    
+                    // else{
+                    //     alert("Campo")
+                    // }
+    }
 }
 
 function validarNome(nome){
