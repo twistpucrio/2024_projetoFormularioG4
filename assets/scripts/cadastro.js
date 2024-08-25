@@ -13,12 +13,20 @@
 
 
 function limpar(){
-    let texto = document.getElementsByClassName("texto")
-
-
-   for (at of texto){
-        at.value = ""
-   }
+    let texto = document.querySelector("#nome");
+    texto.value = "";
+    texto = document.querySelector("#cpf");
+    texto.value = "";
+    texto = document.querySelector("#dataNasc");
+    texto.value = "";
+    texto = document.querySelector("#usuario");
+    texto.value = "";
+    texto = document.querySelector("#email");
+    texto.value = "";
+    texto = document.querySelector("#senha");
+    texto.value = "";
+    texto = document.querySelector("#confSenha");
+    texto.value = "";
    
 }
 
@@ -332,7 +340,6 @@ window.addEventListener("load",
 
         btnLimpar.addEventListener("click",
             function(){
-                valicaoCpf()
                 limpar()
             }
 
@@ -348,9 +355,11 @@ window.addEventListener("load",
                 arq = document.querySelector("#arq")
                 usuario = document.querySelector("#usuario")
                 confSenha = document.querySelector("#confSenha")
+                cpf = document.querySelector("#cpf")
 
 
                 validarNome(nome.value);
+                validaCpf(cpf);
                 validarDataNasc(nasc);
                 validarExtensao(arq, "doc");
                 validaSenha(senha);
