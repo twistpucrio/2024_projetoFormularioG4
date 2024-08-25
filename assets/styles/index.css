@@ -53,7 +53,8 @@ body{
     height: 100vh;
 
 
-    background-color: rgb(205,125, 229);
+    background: linear-gradient(rgb(205,125, 229),#f86ca6,#fa4747);
+    /* background-color: rgb(205,125, 229); */
 
 
     padding: 25px;
