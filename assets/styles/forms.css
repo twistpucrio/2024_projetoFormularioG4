@@ -37,7 +37,9 @@ body{
     height: 90vh;
 
 
-    background: linear-gradient(rgb(205,125, 229),#f86ca6,#fa4747);
+    /* background: linear-gradient(rgb(205,125, 229),#f86ca6,#fa4747);
+     */
+     background: linear-gradient(#fa23de, #f6168a);
 
 
     padding: 25px;
