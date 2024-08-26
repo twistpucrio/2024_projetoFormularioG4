@@ -13,21 +13,12 @@
 
 
 function limpar(){
-    let texto = document.querySelector("#nome");
-    texto.value = "";
-    texto = document.querySelector("#cpf");
-    texto.value = "";
-    texto = document.querySelector("#dataNasc");
-    texto.value = "";
-    texto = document.querySelector("#usuario");
-    texto.value = "";
-    texto = document.querySelector("#email");
-    texto.value = "";
-    texto = document.querySelector("#senha");
-    texto.value = "";
-    texto = document.querySelector("#confSenha");
-    texto.value = "";
-   
+    let campos = document.querySelectorAll(".required")
+    console.log(campos)
+
+   for (at of campos){
+        at.value = ""
+   }
 }
 
 
@@ -82,11 +73,13 @@ function validaCpf(cpf){
 
 
     if (cpfRegex.test(cpf.value)){
+       
         removeError(1)
+    
     }
     else{
         setError(1)
-    }    
+    }
 }
 
 
@@ -97,54 +90,19 @@ function buscarNum(dados){ // espaço em branco
 }
 
 
-function validarNome(campoNome){ //retorna o índice do achado
+function validaNome(nome){ //retorna o índice do achado
     const nomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/
 
-
-    if (buscarNum(campoNome) === -1){
-        console.log("Não há número")
+    if (nomeRegex.test(nome.value)){
+        
+        removeError(0)
+    
     }
     else{
-        console.log("erro")
+        setError(0)
     }
 
-
-    if (nomeRegex.test(campoNome)){
-        console.log("passou")
-    }
-    else{
-        console.log("errouuu")
-    }
-
-
-
-
-    // for(dig of campoNome){
-    //     if(null === ehLetra(dig)){
-    //         alert("erro");
-    //     }
-    // }
 }
-
-
-// function validaTamanho(){
-//     let campos = document.querySelectorAll(".required")
-   
-//     if (campos[0].value.length < 3){
-//         setError(0)
-
-
-
-
-//     }
-//     else{
-//         removeError(0)
-//     }
-// }
-
-
-
-
 
 
 function validaDataNasc(dtNasc){
@@ -208,12 +166,9 @@ function validaSenha(senha){
 
     console.log(senha.value)
     if (senhaRegex.test(senha.value)){
-        senha.addEventListener("input",
-            function(){
-                removeError(5)
-            }
-        )
-           
+
+        removeError(5)
+  
     }
     else{
         setError(5)
@@ -226,11 +181,9 @@ function comparaSenhas(senha1, senha2){
 
     console.log(senha1.value, senha2.value)
     if (senha1.value === senha2.value){
-        senha.addEventListener("input",
-            function(){
-                removeError(6)
-            }
-        )
+       
+        removeError(6)
+
     }
     else{
         setError(6)
@@ -247,6 +200,7 @@ function setError(indice){
 
     campos[indice].style.border = "2px solid red";
     spans[indice].style.display = "block";
+
 }
 
 
@@ -265,14 +219,7 @@ window.addEventListener("load",
         let btnLimpar = document.querySelector(".btnLimpar");
         let btnValidar = document.querySelector(".btnSubmeter")
 
-
-        let campos = document.querySelectorAll(".required")
-
-
-        let email = document.querySelector("#email")
-
-
-        let nome, nasc, arq, usuario, senha, cpf;
+        let nome, nasc, arq, usuario, senha, cpf, email;
 
 
         senha = document.querySelector("#senha")
@@ -281,6 +228,7 @@ window.addEventListener("load",
         usuario = document.querySelector("#usuario")
         confSenha = document.querySelector("#confSenha")
         cpf = document.querySelector("#cpf")
+        email = document.querySelector("#email")
        
         nasc.addEventListener("focusout",
             function(){
@@ -295,16 +243,16 @@ window.addEventListener("load",
             }
         )
                
-        cpf.addEventListener("input",
+        cpf.addEventListener("focusout",
             function(){
                 validaCpf(cpf);
             }
         )
 
 
-        nome.addEventListener("input",
+        nome.addEventListener("focusout",
             function(){
-                validaTamanho(0);
+                validaNome(nome);
             }
         )
        
@@ -357,15 +305,14 @@ window.addEventListener("load",
                 confSenha = document.querySelector("#confSenha")
                 cpf = document.querySelector("#cpf")
 
-
-                validarNome(nome.value);
+                validaDataNasc(nasc);
+                validarUsuario(usuario)
                 validaCpf(cpf);
-                validarDataNasc(nasc);
-                validarExtensao(arq, "doc");
+                validaNome(nome);
+                validaEmail(email);
                 validaSenha(senha);
-                validarUsuario(usuario);
-                validaTamanho(0)
-                validaEmail(email)
+                comparaSenhas(senha, confSenha)
+
             }
         )
     }
