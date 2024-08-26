@@ -139,21 +139,19 @@ body{
 
 #main{
     width: 110vw;
-    height: 100vh;
+    height: 100%;
 
 
     background-color: rgb(205,125, 229);
 
 
-    padding: 25px;
+    padding-left: 300px;
+    padding-right: 50px;
     /* margin: 10%; */
     justify-content: center;
 
 
     /* display: inline-block;; */
-
-
-   
 
 
     img{
@@ -163,8 +161,26 @@ body{
         border-radius: 50%;
     }
 
+    #header{
+        font-size: 70px;
+        text-align: right;
+        padding-top: 50px;
+        padding-right: 210px;
+    }
 
-   
+   #descricao{
+    padding-left: 300px;
+    padding-right: 200px;
+    text-align: center;
+   }
+
+   .subTitulo{
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    font-size: 40px;
+    text-align: center;
+   }
    
     .pessoa{
         display: inline-block;
