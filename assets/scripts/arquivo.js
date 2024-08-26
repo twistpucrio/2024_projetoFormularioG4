@@ -1,6 +1,7 @@
 
 function limpar(){
-    let atividade = document.getElementsByName("tipoArquivo");
+    let atividade = document.getElementsByClassName("tipoArquivo");
+
    
     for (at of atividade){
         at.checked = false;
