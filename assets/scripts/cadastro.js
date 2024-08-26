@@ -19,7 +19,6 @@ function limpar(){
    for (at of campos){
         at.value = ""
    }
-   
 }
 
 
@@ -304,6 +303,7 @@ window.addEventListener("load",
                 arq = document.querySelector("#arq")
                 usuario = document.querySelector("#usuario")
                 confSenha = document.querySelector("#confSenha")
+                cpf = document.querySelector("#cpf")
 
                 validaDataNasc(nasc);
                 validarUsuario(usuario)

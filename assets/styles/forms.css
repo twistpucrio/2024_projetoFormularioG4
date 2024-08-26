@@ -140,7 +140,9 @@ body{
     height: 100vh;
 
 
-    background-color: rgb(205,125, 229);
+    /* background: linear-gradient(rgb(205,125, 229),#f86ca6,#fa4747);
+     */
+     background: linear-gradient(#fa23de, #f6168a);
 
 
     padding-left: 600px;
