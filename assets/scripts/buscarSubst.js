@@ -25,11 +25,16 @@ function substitui(entrada,remover,subst){
 
     let novo = document.querySelector("#newText");
 
+    // let qtd = subst.length;
+    let resp;
 
-    let resp = entrada.replace(remover, subst);
+    while(entrada.search(remover) != -1){
+        resp = entrada.replace(remover, subst);
+        entrada = resp;
+    }
 
 
-    novo.value = resp;
+    novo.value = entrada;
 
 
     // exemplo com expressão regular

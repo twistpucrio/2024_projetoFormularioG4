@@ -173,8 +173,18 @@ window.addEventListener("load",
 
         btnValid.addEventListener("click",
             function(){
-                validarNomeArquivo(arq)
+               
+                
+                if(arq.value == ""){
+                    alert("Nenhum arquivo inserido");
+                    return;
+                }
+
+                validarNomeArquivo(arq);
+
                 validarExtensao(arq, "docs");
+
+
             }
         )
     }
