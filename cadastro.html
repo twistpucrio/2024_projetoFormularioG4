@@ -18,66 +18,21 @@
 <body>
    
     <div id="conteudo">
-       
-        <nav class="sidebar">
-
-            <ul class="link">
-                <li>
-                    <a class="a" href="index.html">
-                        <img src="assets/icons/home.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Página Inicial</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="a" href="buscar.html">
-                        <img src="assets/icons/buscar.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Buscar</p>
-                    </a>
-                </li>
-                <li>            
-                    <a class="a" href="arq.html">
-                        <img src="assets/icons/arquivo.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Arquivo</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="a" href="buscSubst.html">
-                        <img src="assets/icons/findReplace.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Buscar e Substiuir</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="a" href="cadastro.html">
-                        <img src="assets/icons/cadastro.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Cadastro</p>
-                    </a>
-                </li>
-            </ul>
-
-            <footer id="footer"> 
-                
-                <p> Desenvolvido para fins didáticos, por </p><br/>
-                
-                    <a class="nome" href="">Hanna Epelboim</a>
-                
-                    <a class="nome" href="https://github.com/judyFariaTecgraf">Judy Faria</a>
-                
-            
-                <p class="twist"> Programa <a href="https://www.tecgraf.puc-rio.br/twist/"> Twist</a> - Tecgraf . 2024</p>
-            </footer>
-
+        <header id="header" ></header>
+        <nav id="nav">
+            <a href="index.html">Home |</a>
+            <a href="buscar.html">Buscar |</a>
+            <a href="arq.html">Arquivo |</a>
+            <a href="buscSubst.html">Buscar e Substituir |</a>
+            <a href="cadastro.html">Cadastro</a>
         </nav>
-
         <section id="main">
-
-            <header id="header" >Projeto REGEX</header>
-
             <form class="form" action="" method="get">
                 <fieldset>
                     <legend>Dados Pessoais:</legend>
                     <label for="nome">Nome: </label>
                     <input class="texto required" type="text" name="nome" id="nome">
-                    <span class="span-required">Não permite dígitos numéricos</span>
+                    <span class="span-required">não permite dígitos numéricos</span>
 
 
                     <br>
@@ -86,7 +41,7 @@
                     <label for="cpf">CPF: </label>
                     <input class="texto required" type="text" name="cpf" id="cpf"
                         size="13" maxlength="14"  placeholder="xxx.xxx.xxx-xx">
-                    <span class="span-required">CPF Inválido</span>
+                    <span class="span-required">erro na validação</span>
                    
                     <br>
                     <br>
@@ -94,7 +49,7 @@
 
                     <label for="dataNasc">Data de nascimento: </label>
                     <input class="texto required" type="date" name="dataNasc" id="dataNasc">
-                    <span class="span-required">Data inválida</span>
+                    <span class="span-required">erro na validação</span>
                     <br>
                     <br>
 
@@ -107,7 +62,7 @@
                
                     <label for="usuario">Usuário: </label>
                     <input class="texto required" type="text" name="usuario" id="usuario">
-                    <span class="span-required">Digite um usúario válido</span>
+                    <span class="span-required">erro na validação</span>
 
 
                     <br>
@@ -116,7 +71,7 @@
                     <label for="email">Email: </label>
                     <input class="texto required" type="email" name="email" id="email"
                            placeholder="algumacoisa@algumacoisa">
-                    <span class="span-required">Digite um email válido</span>
+                    <span class="span-required">erro na validação</span>
 
 
                     <br>
@@ -125,7 +80,7 @@
 
                     <label for="senha">Senha: </label>
                     <input class="texto required" type="password" name="senha" id="senha">
-                    <span class="span-required">Digite uma senha válida</span>
+                    <span class="span-required">erro na validação</span>
 
 
                     <br>
@@ -134,7 +89,7 @@
 
                     <label for="confSenha">Confirmar senha: </label>
                     <input class="texto required" type="password" name="confSenha" id="confSenha">
-                    <span class="span-required">As senhas devem ser iguais</span>
+                    <span class="span-required">erro na validação</span>
                    
                 </fieldset><br/>
 
@@ -147,6 +102,10 @@
 
 
         </section>
+        <footer id="footer"></footer>
+
+
+
 
     </div>
    

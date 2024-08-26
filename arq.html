@@ -14,60 +14,16 @@
 <body>
    
     <div id="conteudo">
-        
-        <nav class="sidebar">
-
-            <ul class="link">
-                <li>
-                    <a class="a" href="index.html">
-                        <img src="assets/icons/home.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Página Inicial</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="a" href="buscar.html">
-                        <img src="assets/icons/buscar.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Buscar</p>
-                    </a>
-                </li>
-                <li>            
-                    <a class="a" href="arq.html">
-                        <img src="assets/icons/arquivo.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Arquivo</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="a" href="buscSubst.html">
-                        <img src="assets/icons/findReplace.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Buscar e Substiuir</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="a" href="cadastro.html">
-                        <img src="assets/icons/cadastro.png" style="height: 1rem; margin-right: 0.5rem"/>
-                        <p>Cadastro</p>
-                    </a>
-                </li>
-            </ul>
-
-            <footer id="footer"> 
-                
-                <p> Desenvolvido para fins didáticos, por </p><br/>
-                
-                    <a class="nome" href="">Hanna Epelboim</a>
-                
-                    <a class="nome" href="https://github.com/judyFariaTecgraf">Judy Faria</a>
-                
-            
-                <p class="twist"> Programa <a href="https://www.tecgraf.puc-rio.br/twist/"> Twist</a> - Tecgraf . 2024</p>
-            </footer>
-
+        <header id="header" ></header>
+        <nav id="nav">
+            <a href="index.html">Home |</a>
+            <a href="buscar.html">Buscar |</a>
+            <a href="arq.html">Arquivo |</a>
+            <a href="buscSubst.html">Buscar e Substituir |</a>
+            <a href="cadastro.html">Cadastro</a>
         </nav>
-
-
         <section id="main">
-            <header id="header" >Projeto REGEX</header>
-        
+           
             <form action="" method="get">
                 <fieldset border="1">
 
@@ -106,8 +62,8 @@
                         <!-- <input type="text" name="nomeArq" id="nomeArq"> -->
                         <!-- <input type="file" name="file"   value="Insira seu arquivo:" > -->
                         <input type="file" name="file"  id="file">
-                        <span class="span-required">Nome do arquivo inválido</span>
-                        <span class="span-required">Insira um tipo válido</span>
+                        <span class="span-required">erro na validação do nome do arquivo</span>
+                        <span class="span-required">erro de permissão</span>
 
                     </fieldset>
                     <br>
@@ -122,6 +78,10 @@
 
 
         </section>
+        <footer id="footer"></footer>
+
+
+
 
     </div>
    

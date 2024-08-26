@@ -11,6 +11,64 @@ function limpar(){
 }
 
 
+// function valRegras(nome){
+//     const exp = /[^([A-Z]{1})([A-Za-z_]{7-14})]/g;
+//     let resultado = texto.match(expressao);
+//     return resultado;
+// }
+
+
+// function validar(){
+//     let nome = document.querySelector("#file").value;
+//     let selecionados = document.querySelectorAll("#tipoArquivo");
+//     let flag = false;
+
+
+//     selecionados.checked
+
+
+//     let vetor = nome.split(".");
+//     let extensao = vetor[1];
+//     nome = vetor[0];
+
+
+
+
+//     for(tipo of selecionados){
+
+
+//         if(extensao === "imagem"){
+//             if("png" === extensao.lower){
+//                 flag = true;
+//             }
+//             else if("jpeg" === extensao.lower){
+//                 flag = true;
+//             }
+//             else if("jpg" === extensao.lower){
+//                 flag = true;
+//             }
+//         }
+
+
+
+
+//         if(tipo.lower === extensao.lower){
+//             flag = true;
+//         }
+//     }  
+
+
+//     if(flag){
+//         valRegras(nome);
+//     }
+
+
+//     if(flag){
+//         alert("oki");
+//     }
+// }
+
+
 function validarNomeArquivo(arquivo){
     // obs: arquivo é o elemento input: file inteiro
 
@@ -129,7 +187,6 @@ function validarExtensao(arquivo, extensao){
 function setError(indice){
     let campo = document.querySelector("#file")
     let spans = document.querySelectorAll(".span-required")
-    let checkbox = document.getElementsByClassName("tipoArquivo");
 
 
     campo.style.border = "2px solid red";
