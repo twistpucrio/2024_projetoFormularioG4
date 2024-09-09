@@ -57,11 +57,7 @@ function ehLetra(dados){
     return resultado // retorno -1 = não há ocorrência
 }
 
-
-function validaCpf(cpf){
-    const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/
-
-
+function drawMascara(cpf){
     /* Máscara */
     let tamanhoCpf = cpf.value.length    
     if ((tamanhoCpf === 3) || (tamanhoCpf === 7)){
@@ -70,6 +66,12 @@ function validaCpf(cpf){
     else if(tamanhoCpf === 11){
         cpf.value += "-"
     }
+
+
+}
+
+function validaCpf(cpf){
+    const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/
 
 
     if (cpfRegex.test(cpf.value)){
@@ -242,7 +244,12 @@ window.addEventListener("load",
                 validarUsuario(usuario)
             }
         )
-               
+        
+        cpf.addEventListener("input",
+            function(){
+                drawMascara(cpf)
+            }
+        )
         cpf.addEventListener("focusout",
             function(){
                 validaCpf(cpf);
@@ -312,7 +319,6 @@ window.addEventListener("load",
                 validaEmail(email);
                 validaSenha(senha);
                 comparaSenhas(senha, confSenha)
-
             }
         )
     }
