@@ -28,6 +28,8 @@ function substitui(entrada,remover,subst){
     // let qtd = subst.length;
     let resp;
 
+
+
     while(entrada.search(remover) != -1){
         resp = entrada.replace(remover, subst);
         entrada = resp;
@@ -55,8 +57,14 @@ function split(entrada, corte){
 function validar(){
     let entrada, remover, subst;
      
+
     entrada = document.querySelector("#text").value;
     remover = document.querySelector("#find").value;
+    if(remover == ""){
+        alert("Campo buscar vazio");
+        return;
+    }
+
     subst = document.querySelector("#replace").value;
     substitui(entrada,remover,subst);
 
